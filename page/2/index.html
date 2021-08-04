@@ -147,6 +147,87 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://aliridesu.github.io/hexoTest/images/avatar.gif">
+      <meta itemprop="name" content="Aliri">
+      <meta itemprop="description" content="this is just a test">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aliri学习笔记">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a target="_blank" rel="noopener" href="https://aliridesu.github.io/hexoTest/3/" class="post-title-link" itemprop="url">03-css基础1</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-07-12 15:00:42 / 修改时间：15:09:17" itemprop="dateCreated datePublished" datetime="2021-07-12T15:00:42+08:00">2021-07-12</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="css基础1"><a href="#css基础1" class="headerlink" title="css基础1"></a>css基础1</h2><h3 id="css样式引入方式"><a href="#css样式引入方式" class="headerlink" title="css样式引入方式"></a>css样式引入方式</h3><pre><code>描述：引入方法就是css文件可以作用域html的方法
+</code></pre>
+<h4 id="内联样式表（行内样式表）"><a href="#内联样式表（行内样式表）" class="headerlink" title="内联样式表（行内样式表）"></a>内联样式表（行内样式表）</h4><pre><code>只对当前标签生效
+</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">style</span>=<span class="string">&#x27;color:black&#x27;</span>&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="内部样式表"><a href="#内部样式表" class="headerlink" title="内部样式表"></a>内部样式表</h4><pre><code>可以批量对元素添加样式
+</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="外部部样式表"><a href="#外部部样式表" class="headerlink" title="外部部样式表"></a>外部部样式表</h4><pre><code>a.可以批量对元素添加样式
+b.允许css文件和html文件分离开，使团队开发成为可能
+</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&#x27;stylesheet&#x27;</span> <span class="attr">href</span>=<span class="string">&#x27;&#x27;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="导入式样式表"><a href="#导入式样式表" class="headerlink" title="导入式样式表"></a>导入式样式表</h4><pre><code>@import
+</code></pre>
+<h3 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h3><ol>
+<li>基础选择器<br>类型： id class tag *<ol>
+<li>id<br>描述：id选择器用于选中页面中具有id属性，并且id属性是某个指定内容的标签<br>语法：#id{ … }<br>说明：<br>a.id属性约定在页面中唯一存在<br>b.id属性对一个标签而言建议只添加一个</li>
+<li>class 类选择器<br>描述：class选择器用于选中页面中具有class属性，并且class属性是某个指定内容的标签们<br>语法：.class { … }<br>说明：<br>a.class属性允许对多个标签添加到相同属性值<br>b.一个标签也可以允许添加多个不同的class属性值，用空格隔开</li>
+<li>tag 标签/元素选择器<br>描述：tag选择器直接使用标签名作为选择器名<br>语法：tag { … }<br>说明：标签阿选择权只能选中指定的所有标签，没有办法只选中某一个或某几个标签</li>
+<li><code>*</code> 通配符选择器<br>描述：直接使用<em>作为选择器名，选中页面中所有元素<br>语法：</em> { … }<br>说明：一般用于页面初始化操作 </li>
+</ol>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -370,7 +451,7 @@
       <div class="site-state-item site-state-posts">
           <a target="_blank" rel="noopener" href="https://aliridesu.github.io/hexoTest/archives/">
         
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
