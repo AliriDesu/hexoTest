@@ -20,19 +20,19 @@
     var CONFIG = {"hostname":"example.com","root":"https://aliridesu.github.io/hexoTest/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="精灵图通过background-image和background-position加载页面图片的手段  字体图标iconfont">
+  <meta name="description" content="js基本概述描述1. JavaScript语句的末尾使用分号表示，但不意味着每一句末尾都有分号 2. 建议一行只写一条js语句 3. js是一门面向过程的脚本式编程语言  变量描述创建变量的过程，实际上是向系统申请内存的过程。  扩展内存是分区的，栈区+堆区+静态存储区，所有的变量被创建的时候，分配的内存都在栈区。  语法var 变量名 &#x3D; xxx;  命名由字母、数字、下划线、和美元符号任意组合">
 <meta property="og:type" content="article">
-<meta property="og:title" content="06-精灵图">
-<meta property="og:url" content="http://example.com/6/index.html">
+<meta property="og:title" content="11-JS-2">
+<meta property="og:url" content="http://example.com/12/index.html">
 <meta property="og:site_name" content="Aliri学习笔记">
-<meta property="og:description" content="精灵图通过background-image和background-position加载页面图片的手段  字体图标iconfont">
+<meta property="og:description" content="js基本概述描述1. JavaScript语句的末尾使用分号表示，但不意味着每一句末尾都有分号 2. 建议一行只写一条js语句 3. js是一门面向过程的脚本式编程语言  变量描述创建变量的过程，实际上是向系统申请内存的过程。  扩展内存是分区的，栈区+堆区+静态存储区，所有的变量被创建的时候，分配的内存都在栈区。  语法var 变量名 &#x3D; xxx;  命名由字母、数字、下划线、和美元符号任意组合">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-07-13T01:30:13.831Z">
-<meta property="article:modified_time" content="2021-07-13T10:45:23.984Z">
+<meta property="article:published_time" content="2021-08-04T01:26:18.993Z">
+<meta property="article:modified_time" content="2021-08-04T02:20:03.843Z">
 <meta property="article:author" content="Aliri">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/6/">
+<link rel="canonical" href="http://example.com/12/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>06-精灵图 | Aliri学习笔记</title>
+  <title>11-JS-2 | Aliri学习笔记</title>
   
 
 
@@ -150,7 +150,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/6/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/12/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://aliridesu.github.io/hexoTest/images/avatar.gif">
@@ -163,7 +163,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          06-精灵图
+          11-JS-2
         </h1>
 
         <div class="post-meta">
@@ -174,7 +174,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-07-13 09:30:13 / 修改时间：18:45:23" itemprop="dateCreated datePublished" datetime="2021-07-13T09:30:13+08:00">2021-07-13</time>
+              <time title="创建时间：2021-08-04 09:26:18 / 修改时间：10:20:03" itemprop="dateCreated datePublished" datetime="2021-08-04T09:26:18+08:00">2021-08-04</time>
             </span>
 
           
@@ -188,9 +188,53 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="精灵图"><a href="#精灵图" class="headerlink" title="精灵图"></a>精灵图</h3><pre><code>通过background-image和background-position加载页面图片的手段
+        <h3 id="js基本概述"><a href="#js基本概述" class="headerlink" title="js基本概述"></a>js基本概述</h3><h4 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h4><pre><code>1. JavaScript语句的末尾使用分号表示，但不意味着每一句末尾都有分号
+2. 建议一行只写一条js语句
+3. js是一门面向过程的脚本式编程语言
 </code></pre>
-<h3 id="字体图标"><a href="#字体图标" class="headerlink" title="字体图标"></a>字体图标</h3><pre><code>iconfont
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><h4 id="描述-1"><a href="#描述-1" class="headerlink" title="描述"></a>描述</h4><pre><code>创建变量的过程，实际上是向系统申请内存的过程。
+</code></pre>
+<h4 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h4><pre><code>内存是分区的，栈区+堆区+静态存储区，所有的变量被创建的时候，分配的内存都在栈区。
+</code></pre>
+<h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><pre><code>var 变量名 = xxx;
+</code></pre>
+<h4 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h4><pre><code>由字母、数字、下划线、和美元符号任意组合而成，并且不能以数字开头。
+</code></pre>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><pre><code>ES5
+五种基本数据类型
+    数字类型        Number
+    字符串类型      String
+    逻辑值类型      Boolean
+    未定义类型      Undefined
+    空值类型        Null
+    复杂数据类型    Object
+ES6
+新增一种基本数据类型
+    标记类型        Symbol
+新增五种复杂数据类型
+    超级复杂复数句类型  Map
+    集合类型        Set
+    弱引用 超级 复杂数据类型 WeakMap
+    弱引用 集合类型 WeakSet
+    类 数据类型     TypedArray
+</code></pre>
+<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><h4 id="描述-2"><a href="#描述-2" class="headerlink" title="描述"></a>描述</h4><pre><code>js中运算符表示将变量进行某种内容的变化的符号
+</code></pre>
+<h4 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h4><pre><code>算术运算符、赋值运算符、逻辑运算符、逻辑运算符、关系运算符、三目运算符...
+查看类型运算符：typeof
+</code></pre>
+<h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><pre><code>算数运算符 + - * / %
+赋值运算符 = 
+1. 当运算符的左右两端的运算子均为数字类型时，仍采用基本数学运算规则
+2. 当运算符的左右两端的运算子不都是数字类型时
+   1. 加法会先将非字符串类型转换成字符串类型，然后再将两个字符串拼接
+   2. 其余会先将字符串转换成数字类型，再按照数学逻辑运算。当字符串无法转换成数字类型的时候，运算结果就会出现NaN
+</code></pre>
+<h4 id="扩展-三目运算符："><a href="#扩展-三目运算符：" class="headerlink" title="扩展 三目运算符：?:"></a>扩展 三目运算符：?:</h4><h5 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h5><pre><code>表达式1 ? 表达式2 : 表达式3
+</code></pre>
+<h5 id="名词"><a href="#名词" class="headerlink" title="名词"></a>名词</h5><pre><code>表达式-&gt; 具有含义的式子
+</code></pre>
+<h5 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h5><pre><code>判断表达式1的逻辑值，真则结果为表达式2，假则结果为表达式3
 </code></pre>
 
     </div>
@@ -207,13 +251,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a target="_blank" href="https://aliridesu.github.io/hexoTest/5/" rel="prev noopener" title="05-css选择器">
-      <i class="fa fa-chevron-left"></i> 05-css选择器
+    <a target="_blank" href="https://aliridesu.github.io/hexoTest/11/" rel="prev noopener" title="11-JS-1">
+      <i class="fa fa-chevron-left"></i> 11-JS-1
     </a></div>
-      <div class="post-nav-item">
-    <a target="_blank" href="https://aliridesu.github.io/hexoTest/7/" rel="next noopener" title="07-盒子模型">
-      07-盒子模型 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -272,7 +313,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B2%BE%E7%81%B5%E5%9B%BE"><span class="nav-number">1.</span> <span class="nav-text">精灵图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E4%BD%93%E5%9B%BE%E6%A0%87"><span class="nav-number">2.</span> <span class="nav-text">字体图标</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#js%E5%9F%BA%E6%9C%AC%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">js基本概述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">描述</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F"><span class="nav-number">2.</span> <span class="nav-text">变量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8F%8F%E8%BF%B0-1"><span class="nav-number">2.1.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%89%A9%E5%B1%95"><span class="nav-number">2.2.</span> <span class="nav-text">扩展</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95"><span class="nav-number">2.3.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%91%BD%E5%90%8D"><span class="nav-number">2.4.</span> <span class="nav-text">命名</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">3.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">4.</span> <span class="nav-text">运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8F%8F%E8%BF%B0-2"><span class="nav-number">4.1.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%B1%BB%E5%9E%8B"><span class="nav-number">4.2.</span> <span class="nav-text">类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E"><span class="nav-number">4.3.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%89%A9%E5%B1%95-%E4%B8%89%E7%9B%AE%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%9A"><span class="nav-number">4.4.</span> <span class="nav-text">扩展 三目运算符：?:</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95-1"><span class="nav-number">4.4.1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%90%8D%E8%AF%8D"><span class="nav-number">4.4.2.</span> <span class="nav-text">名词</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BD%9C%E7%94%A8"><span class="nav-number">4.4.3.</span> <span class="nav-text">作用</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
