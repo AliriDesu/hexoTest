@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"example.com","root":"https://aliridesu.github.io/hexoTest/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="this is just a test">
+  <meta name="description" content="js说明描述js是一门面向过程的脚本式编程语言     面向过程 没有【对象】这种数据结构     面向对象 包含【对象】这种数据结构  说明js为了能够与其他的编程语言协同工作，达到脚本语言的能力，不得不使用某种【已经存在的数据结构】来模拟【面向对象语言中的对象结构】  js对象描述在js中，对象是通过大括号&amp;#123;&amp;#125;定义的，在大括号内部使用键值对构成的，键值对之间用逗号间隔的，键">
 <meta property="og:type" content="article">
 <meta property="og:title" content="13-JS-对象概述">
 <meta property="og:url" content="http://example.com/13/index.html">
 <meta property="og:site_name" content="Aliri学习笔记">
-<meta property="og:description" content="this is just a test">
+<meta property="og:description" content="js说明描述js是一门面向过程的脚本式编程语言     面向过程 没有【对象】这种数据结构     面向对象 包含【对象】这种数据结构  说明js为了能够与其他的编程语言协同工作，达到脚本语言的能力，不得不使用某种【已经存在的数据结构】来模拟【面向对象语言中的对象结构】  js对象描述在js中，对象是通过大括号&amp;#123;&amp;#125;定义的，在大括号内部使用键值对构成的，键值对之间用逗号间隔的，键">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-08-04T09:14:53.768Z">
-<meta property="article:modified_time" content="2021-08-04T09:15:24.719Z">
+<meta property="article:modified_time" content="2021-08-05T03:14:58.385Z">
 <meta property="article:author" content="Aliri">
 <meta name="twitter:card" content="summary">
 
@@ -172,10 +172,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-08-04 17:14:53 / 修改时间：17:15:24" itemprop="dateCreated datePublished" datetime="2021-08-04T17:14:53+08:00">2021-08-04</time>
+              <time title="创建时间：2021-08-04 17:14:53" itemprop="dateCreated datePublished" datetime="2021-08-04T17:14:53+08:00">2021-08-04</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-08-05 11:14:58" itemprop="dateModified" datetime="2021-08-05T11:14:58+08:00">2021-08-05</time>
+              </span>
 
           
 
@@ -188,7 +194,69 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <h3 id="js说明"><a href="#js说明" class="headerlink" title="js说明"></a>js说明</h3><h4 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h4><pre><code>js是一门面向过程的脚本式编程语言
+    面向过程 没有【对象】这种数据结构
+    面向对象 包含【对象】这种数据结构
+</code></pre>
+<h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><pre><code>js为了能够与其他的编程语言协同工作，达到脚本语言的能力，不得不使用某种【已经存在的数据结构】来模拟【面向对象语言中的对象结构】
+</code></pre>
+<h3 id="js对象"><a href="#js对象" class="headerlink" title="js对象"></a>js对象</h3><h4 id="描述-1"><a href="#描述-1" class="headerlink" title="描述"></a>描述</h4><pre><code>在js中，对象是通过大括号&#123;&#125;定义的，在大括号内部使用键值对构成的，键值对之间用逗号间隔的，键名与键值之间使用冒号间隔的数据结构。
+</code></pre>
+<h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><pre><code>var obj = &#123;key1:value1,key2:value2,...&#125;
+</code></pre>
+<h4 id="说明-1"><a href="#说明-1" class="headerlink" title="说明"></a>说明</h4><pre><code>1.  key（键）：也叫键名、属性、属性名、方法、方法名，要求必须是字符串类型
+2.  value（值）：也叫键值，方法、方法、属性值，可以是任意数据类型
+</code></pre>
+<h4 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h4><pre><code>读取操作 获取对象属性的值
+    对象名.属性名
+    对象名[&#39;属性名&#39;]
+写入操作 修改或创建属性的值
+    同上↑
+</code></pre>
+<h4 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h4><pre><code>1.  对象的属性可以不加引号，但不写引号时属性必须符合变量命名规则
+2.  js中对象可以认为有三大类
+    1.  用户自定义对象
+    2.  系统内置对象
+    3.  主机环境下的浏览器对象
+</code></pre>
+<h3 id="Number数字对象"><a href="#Number数字对象" class="headerlink" title="Number数字对象"></a>Number数字对象</h3><pre><code>API
+    1. toFixed(x)
+        描述：数字转换字符串，四舍五入，保留x位小数，x默认是0
+        语法：var str = number.toFixed(x)
+</code></pre>
+<h3 id="String字符串对象"><a href="#String字符串对象" class="headerlink" title="String字符串对象"></a>String字符串对象</h3><pre><code>说明：
+    下标：字符串中字符的序号，下标从0开始。下标系统自动添加
+    长度：字符串中字符的个数
+API
+    1. slice(start,end)
+        描述：截取字符串的片段并返回
+        说明：
+            1.  截取的时候从start到end，但不包括end序号位置的字符
+            2.  截取无论正数序号还是负数序号都是从左到右
+            3.  如果第二个参数不谢，默认从开始截取下表为止一直到末尾
+</code></pre>
+<h3 id="Date对象"><a href="#Date对象" class="headerlink" title="Date对象"></a>Date对象</h3><h4 id="描述-2"><a href="#描述-2" class="headerlink" title="描述"></a>描述</h4><pre><code>Date对象在js中表示日期的含义是Object类型，但经常表现为字符串的样子
+</code></pre>
+<h4 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h4><pre><code>var date = new Date(); //获取当前时间
+var date2 = new Date(&#39;YYYY-MM-DD HH:mm:ss&#39;); //创建指定日期
+var date2 = new Date(YYYY,MM,DD,HH,mm,ss); //创建指定日期，月份从0开始
+</code></pre>
+<h4 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h4><pre><code>运算：日期支持减法和减法
+        加法：字符串拼接
+        减法：毫秒数的差值
+</code></pre>
+<h4 id="本质"><a href="#本质" class="headerlink" title="本质"></a>本质</h4><pre><code>日期在内存中的存储是【距离1970年1月1日0点0分0秒0毫秒】的毫秒数
+</code></pre>
+<h3 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h3><h4 id="描述-3"><a href="#描述-3" class="headerlink" title="描述"></a>描述</h4><pre><code>JSON是一套【利用了JS对象语法的】数据传输格式规范。
+</code></pre>
+<h4 id="语法-2"><a href="#语法-2" class="headerlink" title="语法"></a>语法</h4><pre><code>JSON无法直接写出来，必须通过API进行转换
+</code></pre>
+<h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><pre><code>将非JSON转换为JSON（编码）
+    var jsonStr = JSON.stringify(非JSON数据)
+将JSON转换回非JSON（解析）
+    var 数据 = JSON.parse(JSON数据)
+</code></pre>
+
     </div>
 
     
@@ -206,7 +274,10 @@
     <a target="_blank" href="https://aliridesu.github.io/hexoTest/12/" rel="prev noopener" title="12-JS-2">
       <i class="fa fa-chevron-left"></i> 12-JS-2
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a target="_blank" href="https://aliridesu.github.io/hexoTest/14/" rel="next noopener" title="14-JS-数组、条件与循环">
+      14-JS-数组、条件与循环 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -265,6 +336,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#js%E8%AF%B4%E6%98%8E"><span class="nav-number">1.</span> <span class="nav-text">js说明</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E"><span class="nav-number">1.2.</span> <span class="nav-text">说明</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#js%E5%AF%B9%E8%B1%A1"><span class="nav-number">2.</span> <span class="nav-text">js对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8F%8F%E8%BF%B0-1"><span class="nav-number">2.1.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95"><span class="nav-number">2.2.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E-1"><span class="nav-number">2.3.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C"><span class="nav-number">2.4.</span> <span class="nav-text">操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A1%A5%E5%85%85"><span class="nav-number">2.5.</span> <span class="nav-text">补充</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Number%E6%95%B0%E5%AD%97%E5%AF%B9%E8%B1%A1"><span class="nav-number">3.</span> <span class="nav-text">Number数字对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%AF%B9%E8%B1%A1"><span class="nav-number">4.</span> <span class="nav-text">String字符串对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Date%E5%AF%B9%E8%B1%A1"><span class="nav-number">5.</span> <span class="nav-text">Date对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8F%8F%E8%BF%B0-2"><span class="nav-number">5.1.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95-1"><span class="nav-number">5.2.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%9C%E7%94%A8"><span class="nav-number">5.3.</span> <span class="nav-text">作用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%AC%E8%B4%A8"><span class="nav-number">5.4.</span> <span class="nav-text">本质</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JSON"><span class="nav-number">6.</span> <span class="nav-text">JSON</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8F%8F%E8%BF%B0-3"><span class="nav-number">6.1.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95-2"><span class="nav-number">6.2.</span> <span class="nav-text">语法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#API"><span class="nav-number">7.</span> <span class="nav-text">API</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -278,7 +350,7 @@
       <div class="site-state-item site-state-posts">
           <a target="_blank" rel="noopener" href="https://aliridesu.github.io/hexoTest/archives/">
         
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

@@ -20,19 +20,19 @@
     var CONFIG = {"hostname":"example.com","root":"https://aliridesu.github.io/hexoTest/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="css基础1css样式引入方式描述：引入方法就是css文件可以作用域html的方法  内联样式表（行内样式表）只对当前标签生效  1&lt;h1 style&#x3D;&amp;#x27;color:black&amp;#x27;&gt;&lt;&#x2F;h1&gt; 内部样式表可以批量对元素添加样式  1&lt;style&gt;&lt;&#x2F;style&gt; 外部部样式表a.可以批量对元素添加样式 b.允许css文件和html文">
+  <meta name="description" content="函数描述1. 具有某些特定功能，可以重复调用，闭合的代码结构  语法函数定义function 函数名 (形式参数1，形式参数2，...)&amp;#123;     函数体()  &amp;#125;  函数调用函数名称(参数1，参数2，...)  说明1.  函数名：等同于变量名 2.  函数如果只声明，不调用，那么函数相当于不存在 3.  形式参数：形参指的是在定义函数的时候，写在小括号内部，用来表示函数在执">
 <meta property="og:type" content="article">
-<meta property="og:title" content="03-css基础1">
-<meta property="og:url" content="http://example.com/3/index.html">
+<meta property="og:title" content="15-JS-函数">
+<meta property="og:url" content="http://example.com/15/index.html">
 <meta property="og:site_name" content="Aliri学习笔记">
-<meta property="og:description" content="css基础1css样式引入方式描述：引入方法就是css文件可以作用域html的方法  内联样式表（行内样式表）只对当前标签生效  1&lt;h1 style&#x3D;&amp;#x27;color:black&amp;#x27;&gt;&lt;&#x2F;h1&gt; 内部样式表可以批量对元素添加样式  1&lt;style&gt;&lt;&#x2F;style&gt; 外部部样式表a.可以批量对元素添加样式 b.允许css文件和html文">
+<meta property="og:description" content="函数描述1. 具有某些特定功能，可以重复调用，闭合的代码结构  语法函数定义function 函数名 (形式参数1，形式参数2，...)&amp;#123;     函数体()  &amp;#125;  函数调用函数名称(参数1，参数2，...)  说明1.  函数名：等同于变量名 2.  函数如果只声明，不调用，那么函数相当于不存在 3.  形式参数：形参指的是在定义函数的时候，写在小括号内部，用来表示函数在执">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-07-12T07:00:42.246Z">
-<meta property="article:modified_time" content="2021-07-12T07:09:17.087Z">
+<meta property="article:published_time" content="2021-08-09T01:30:06.608Z">
+<meta property="article:modified_time" content="2021-08-09T02:34:50.418Z">
 <meta property="article:author" content="Aliri">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/3/">
+<link rel="canonical" href="http://example.com/15/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>03-css基础1 | Aliri学习笔记</title>
+  <title>15-JS-函数 | Aliri学习笔记</title>
   
 
 
@@ -150,7 +150,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/3/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/15/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://aliridesu.github.io/hexoTest/images/avatar.gif">
@@ -163,7 +163,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          03-css基础1
+          15-JS-函数
         </h1>
 
         <div class="post-meta">
@@ -174,7 +174,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-07-12 15:00:42 / 修改时间：15:09:17" itemprop="dateCreated datePublished" datetime="2021-07-12T15:00:42+08:00">2021-07-12</time>
+              <time title="创建时间：2021-08-09 09:30:06 / 修改时间：10:34:50" itemprop="dateCreated datePublished" datetime="2021-08-09T09:30:06+08:00">2021-08-09</time>
             </span>
 
           
@@ -188,29 +188,35 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="css基础1"><a href="#css基础1" class="headerlink" title="css基础1"></a>css基础1</h2><h3 id="css样式引入方式"><a href="#css样式引入方式" class="headerlink" title="css样式引入方式"></a>css样式引入方式</h3><pre><code>描述：引入方法就是css文件可以作用域html的方法
+        <h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><pre><code>1. 具有某些特定功能，可以重复调用，闭合的代码结构
 </code></pre>
-<h4 id="内联样式表（行内样式表）"><a href="#内联样式表（行内样式表）" class="headerlink" title="内联样式表（行内样式表）"></a>内联样式表（行内样式表）</h4><pre><code>只对当前标签生效
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><h3 id="函数定义"><a href="#函数定义" class="headerlink" title="函数定义"></a>函数定义</h3><pre><code>function 函数名 (形式参数1，形式参数2，...)&#123;
+    函数体() 
+&#125;
 </code></pre>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">style</span>=<span class="string">&#x27;color:black&#x27;</span>&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h4 id="内部样式表"><a href="#内部样式表" class="headerlink" title="内部样式表"></a>内部样式表</h4><pre><code>可以批量对元素添加样式
+<h3 id="函数调用"><a href="#函数调用" class="headerlink" title="函数调用"></a>函数调用</h3><pre><code>函数名称(参数1，参数2，...)
 </code></pre>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h4 id="外部部样式表"><a href="#外部部样式表" class="headerlink" title="外部部样式表"></a>外部部样式表</h4><pre><code>a.可以批量对元素添加样式
-b.允许css文件和html文件分离开，使团队开发成为可能
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><pre><code>1.  函数名：等同于变量名
+2.  函数如果只声明，不调用，那么函数相当于不存在
+3.  形式参数：形参指的是在定义函数的时候，写在小括号内部，用来表示函数在执行的时候，将要被传入真正的参数的一个载体
+4.  实际参数，实参指的是在调用函数的时候，写在小括号内部，真正参与运算的内容
+5.  不定参函数：
+    1.  定义时的参数数量大于调用时的数量
+        通常不建议使用，因为属于非法使用
+        如果必须要使用，一般通过使用【参数初始化】来避免错误
+    2.  定义时的参数数量小于调用时的参数数量
+        js中函数的一种正常使用规则
+        利用js提供给函数内部使用的名为arguments对象的结构
+        其包含了函数在调用的时候的所有参数
+6.  返回值
+    是在函数内部，通过return关键字定义的，用于表示函数的执行结果的，能够将这个结果返回到代码中函数世纪调用的位置，并代替函数调用语句的结构
+    return表示函数执行结束
 </code></pre>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&#x27;stylesheet&#x27;</span> <span class="attr">href</span>=<span class="string">&#x27;&#x27;</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h4 id="导入式样式表"><a href="#导入式样式表" class="headerlink" title="导入式样式表"></a>导入式样式表</h4><pre><code>@import
+<h1 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h1><pre><code>1.  一等公民
+    只要变量可以存在的地方，函数就可以存在
+2.  基本数据类型和复杂数据类型在函数传递参数的时候，有不同的表现形式
+    值传递和引用传递（地址传递）
 </code></pre>
-<h3 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h3><ol>
-<li>基础选择器<br>类型： id class tag *<ol>
-<li>id<br>描述：id选择器用于选中页面中具有id属性，并且id属性是某个指定内容的标签<br>语法：#id{ … }<br>说明：<br>a.id属性约定在页面中唯一存在<br>b.id属性对一个标签而言建议只添加一个</li>
-<li>class 类选择器<br>描述：class选择器用于选中页面中具有class属性，并且class属性是某个指定内容的标签们<br>语法：.class { … }<br>说明：<br>a.class属性允许对多个标签添加到相同属性值<br>b.一个标签也可以允许添加多个不同的class属性值，用空格隔开</li>
-<li>tag 标签/元素选择器<br>描述：tag选择器直接使用标签名作为选择器名<br>语法：tag { … }<br>说明：标签阿选择权只能选中指定的所有标签，没有办法只选中某一个或某几个标签</li>
-<li><code>*</code> 通配符选择器<br>描述：直接使用<em>作为选择器名，选中页面中所有元素<br>语法：</em> { … }<br>说明：一般用于页面初始化操作 </li>
-</ol>
-</li>
-</ol>
 
     </div>
 
@@ -226,13 +232,10 @@ b.允许css文件和html文件分离开，使团队开发成为可能
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a target="_blank" href="https://aliridesu.github.io/hexoTest/2/" rel="prev noopener" title="02-PS切图">
-      <i class="fa fa-chevron-left"></i> 02-PS切图
+    <a target="_blank" href="https://aliridesu.github.io/hexoTest/14/" rel="prev noopener" title="14-JS-数组、条件与循环">
+      <i class="fa fa-chevron-left"></i> 14-JS-数组、条件与循环
     </a></div>
-      <div class="post-nav-item">
-    <a target="_blank" href="https://aliridesu.github.io/hexoTest/4/" rel="next noopener" title="04-css基础2">
-      04-css基础2 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -291,7 +294,7 @@ b.允许css文件和html文件分离开，使团队开发成为可能
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#css%E5%9F%BA%E7%A1%801"><span class="nav-number">1.</span> <span class="nav-text">css基础1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#css%E6%A0%B7%E5%BC%8F%E5%BC%95%E5%85%A5%E6%96%B9%E5%BC%8F"><span class="nav-number">1.1.</span> <span class="nav-text">css样式引入方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%85%E8%81%94%E6%A0%B7%E5%BC%8F%E8%A1%A8%EF%BC%88%E8%A1%8C%E5%86%85%E6%A0%B7%E5%BC%8F%E8%A1%A8%EF%BC%89"><span class="nav-number">1.1.1.</span> <span class="nav-text">内联样式表（行内样式表）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%85%E9%83%A8%E6%A0%B7%E5%BC%8F%E8%A1%A8"><span class="nav-number">1.1.2.</span> <span class="nav-text">内部样式表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%96%E9%83%A8%E9%83%A8%E6%A0%B7%E5%BC%8F%E8%A1%A8"><span class="nav-number">1.1.3.</span> <span class="nav-text">外部部样式表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5%E5%BC%8F%E6%A0%B7%E5%BC%8F%E8%A1%A8"><span class="nav-number">1.1.4.</span> <span class="nav-text">导入式样式表</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.2.</span> <span class="nav-text">选择器</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%87%BD%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95"><span class="nav-number">1.2.</span> <span class="nav-text">语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89"><span class="nav-number">1.2.1.</span> <span class="nav-text">函数定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8"><span class="nav-number">1.2.2.</span> <span class="nav-text">函数调用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E"><span class="nav-number">1.3.</span> <span class="nav-text">说明</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%89%A9%E5%B1%95"><span class="nav-number">2.</span> <span class="nav-text">扩展</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
