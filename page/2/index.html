@@ -147,6 +147,98 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://aliridesu.github.io/hexoTest/images/avatar.gif">
+      <meta itemprop="name" content="Aliri">
+      <meta itemprop="description" content="this is just a test">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aliri学习笔记">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a target="_blank" rel="noopener" href="https://aliridesu.github.io/hexoTest/7/" class="post-title-link" itemprop="url">07-盒子模型</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-07-13 17:36:08" itemprop="dateCreated datePublished" datetime="2021-07-13T17:36:08+08:00">2021-07-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-07-15 10:39:33" itemprop="dateModified" datetime="2021-07-15T10:39:33+08:00">2021-07-15</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="CSS盒子模型使用问题"><a href="#CSS盒子模型使用问题" class="headerlink" title="CSS盒子模型使用问题"></a>CSS盒子模型使用问题</h3><pre><code>1. 垂直 相邻 块元素 margin会发生合并，取最大值（不是bug是特性）
+   1. padding可以计算背景颜色
+2. 垂直 相邻 父子级 元素高度合并（高度击穿，是bug）
+   1. 原因：子级元素无法确定父级元素的边界
+   2. 解决办法：overflow：auto 伪元素：display：table
+3. 水平方向元素边距问题
+    水平不合并
+4. 边距负值问题
+   1. margin减小但大于0时，会想着元素边界移动
+   2. margin越过0，继续减小，元素会想着正值的反向移动
+5. 高度塌陷
+   1. 父级float，父级脱离文档流
+   2. overflow：hidden，对类似下拉菜单不友好
+   3. display：inline-block，变成类文本效果
+   4. position：absolute，需要自己定位
+</code></pre>
+<h3 id="文档流"><a href="#文档流" class="headerlink" title="文档流"></a>文档流</h3><pre><code>浮动：流水排列，半脱离文档流
+绝对定位：完全脱离文档流
+</code></pre>
+<h3 id="BFC解决方案"><a href="#BFC解决方案" class="headerlink" title="BFC解决方案"></a>BFC解决方案</h3><pre><code>块级格式上下文
+1. 在浮动元素后面添加空白块级元素，为其设置clear：both
+2. 在父级伪元素添加clear：both
+</code></pre>
+<h3 id="CSS布局※"><a href="#CSS布局※" class="headerlink" title="CSS布局※"></a>CSS布局※</h3><pre><code>左右布局（两栏布局）
+三栏布局
+</code></pre>
+<h3 id="CSS布局容器思想"><a href="#CSS布局容器思想" class="headerlink" title="CSS布局容器思想"></a>CSS布局容器思想</h3><pre><code>涉及到尺寸方面的问题，绝大多数都可以用添加一个容器解决，如果解决不了，说明容器的位置不对，或不够多。
+</code></pre>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -683,7 +775,7 @@ b.允许css文件和html文件分离开，使团队开发成为可能
       <div class="site-state-item site-state-posts">
           <a target="_blank" rel="noopener" href="https://aliridesu.github.io/hexoTest/archives/">
         
-          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
