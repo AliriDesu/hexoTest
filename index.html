@@ -147,6 +147,115 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/18/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://aliridesu.github.io/hexoTest/images/avatar.gif">
+      <meta itemprop="name" content="Aliri">
+      <meta itemprop="description" content="this is just a test">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aliri学习笔记">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a target="_blank" rel="noopener" href="https://aliridesu.github.io/hexoTest/18/" class="post-title-link" itemprop="url">18-JS-事件</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-08-13 09:22:40 / 修改时间：10:56:51" itemprop="dateCreated datePublished" datetime="2021-08-13T09:22:40+08:00">2021-08-13</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h1><h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><pre><code>是一个抽象的过程，看不见，摸不到
+js中为事件监听的回调函数内部，添加了一个名为event的时间对象，这个对象中包含了时间发生时候的所有特征。
+</code></pre>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><pre><code>不同的事件，它的事件对象中的属性也不相同。
+</code></pre>
+<h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><pre><code>时间对象使用形参的方式调用，会存在某些时间对象属性不生效的情况
+使用系统提供event对象，则永远生效
+</code></pre>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><pre><code>event
+</code></pre>
+<h1 id="监听"><a href="#监听" class="headerlink" title="监听"></a>监听</h1><h2 id="描述-1"><a href="#描述-1" class="headerlink" title="描述"></a>描述</h2><pre><code>当某件事情发生的时候，能够对应做出响应的操作
+</code></pre>
+<h2 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h2><h3 id="HTML级-事件监听"><a href="#HTML级-事件监听" class="headerlink" title="HTML级 事件监听"></a>HTML级 事件监听</h3><h4 id="描述-2"><a href="#描述-2" class="headerlink" title="描述"></a>描述</h4><pre><code>简称为html事件，是指添加事件监听的操作发生在html代码中的监听
+</code></pre>
+<h4 id="语法-2"><a href="#语法-2" class="headerlink" title="语法"></a>语法</h4><pre><code>&lt;E on+事件名=&quot;函数名;&quot;&gt;&lt;/E&gt;
+</code></pre>
+<h4 id="缺陷"><a href="#缺陷" class="headerlink" title="缺陷"></a>缺陷</h4><pre><code>耦合性过高，不利于代码的模块化
+</code></pre>
+<h3 id="DOM0级-事件监听"><a href="#DOM0级-事件监听" class="headerlink" title="DOM0级 事件监听"></a>DOM0级 事件监听</h3><h4 id="描述-3"><a href="#描述-3" class="headerlink" title="描述"></a>描述</h4><pre><code>简称为DOM0事件
+是指在js脚本中，通过.on添加的监听
+</code></pre>
+<h4 id="语法-3"><a href="#语法-3" class="headerlink" title="语法"></a>语法</h4><pre><code>node.onclick = function()&#123;
+
+&#125;
+</code></pre>
+<h4 id="缺陷-1"><a href="#缺陷-1" class="headerlink" title="缺陷"></a>缺陷</h4><pre><code>对于【同一个节点】，【同一个事件】类型，添加的多个监听会产生覆盖，以最后一次添加为准
+</code></pre>
+<h3 id="DOM2级-事件监听"><a href="#DOM2级-事件监听" class="headerlink" title="DOM2级 事件监听"></a>DOM2级 事件监听</h3><h4 id="描述-4"><a href="#描述-4" class="headerlink" title="描述"></a>描述</h4><pre><code>通过指定函数，添加或移除的事件监听
+</code></pre>
+<h4 id="语法-4"><a href="#语法-4" class="headerlink" title="语法"></a>语法</h4><pre><code>添加：
+    node.addEventListener(事件名，外部参数名|回调函数，？useCapture);
+添加：
+    node.removeEventListener(事件名，外部参数名，？useCapture);
+</code></pre>
+<h4 id="说明-1"><a href="#说明-1" class="headerlink" title="说明"></a>说明</h4><pre><code>DOM2事件监听的一出操作必须保证移除函数的代码参数和添加时的参数完全一致
+</code></pre>
+<h4 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h4><pre><code>结构明晰，不会产生覆盖
+</code></pre>
+<h1 id="事件类型"><a href="#事件类型" class="headerlink" title="事件类型"></a>事件类型</h1><h2 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h2><h3 id="鼠标事件"><a href="#鼠标事件" class="headerlink" title="鼠标事件"></a>鼠标事件</h3><ol>
+<li>单击事件   click</li>
+<li>双击事件   dblclick</li>
+<li>按下事件   mousedown</li>
+<li>抬起事件   mouseup</li>
+<li>进入事件   mouseenter | mouseover</li>
+<li>离开事件   mouseleave | mouseout</li>
+<li>移动事件   mousemove<h4 id="键盘事件"><a href="#键盘事件" class="headerlink" title="键盘事件"></a>键盘事件</h4></li>
+<li>按下事件   keydown | keypress</li>
+<li>抬起事件   keyup<h4 id="焦点事件"><a href="#焦点事件" class="headerlink" title="焦点事件"></a>焦点事件</h4></li>
+<li>获得焦点   focus</li>
+<li>失去焦点   blur<h4 id="滚动事件"><a href="#滚动事件" class="headerlink" title="滚动事件"></a>滚动事件</h4>元素滚动 页面滚动 scroll<h4 id="加载时间"><a href="#加载时间" class="headerlink" title="加载时间"></a>加载时间</h4>页面加载 元素加载   load<h4 id="尺寸变化事件"><a href="#尺寸变化事件" class="headerlink" title="尺寸变化事件"></a>尺寸变化事件</h4>页面尺寸变化 元素尺寸变化 resize<h1 id="事件传递"><a href="#事件传递" class="headerlink" title="事件传递"></a>事件传递</h1><h2 id="描述-5"><a href="#描述-5" class="headerlink" title="描述"></a>描述</h2> 在DomTree中，事件当在某一个节点上被触发的时候，会优先和当前触发节点进行交互，在触发了当前节点的事件监听后，并不会立即消失，而是会沿着DomTree向上传递，并沿途触发经过的每一个节点上的事件监听，直到document节点为止。<h2 id="类型-1"><a href="#类型-1" class="headerlink" title="类型"></a>类型</h2><h3 id="冒泡传递"><a href="#冒泡传递" class="headerlink" title="冒泡传递"></a>冒泡传递</h3> 事件由当前触发节点开始，沿着DomTree逐级向上传递，直到document节点为止<h3 id="捕获传递"><a href="#捕获传递" class="headerlink" title="捕获传递"></a>捕获传递</h3> 事件由document节点开始，沿着DomTree逐级向下传递，直到触发节点为止<h1 id="事件委托"><a href="#事件委托" class="headerlink" title="事件委托"></a>事件委托</h1><h2 id="描述-6"><a href="#描述-6" class="headerlink" title="描述"></a>描述</h2> 时间监听并不会直接添加在当前节点，而是会添加在当前节点的父节点上，由父节点同意调配需要执行的内容。这种将时间监听处理推迟到父节点中的操作称为事件委托。<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2> 利用了【事件传递】+【event.target】</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/17/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1094,70 +1203,6 @@ e）space-around：在容器中平均分布，两端有空隙
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://aliridesu.github.io/hexoTest/images/avatar.gif">
-      <meta itemprop="name" content="Aliri">
-      <meta itemprop="description" content="this is just a test">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Aliri学习笔记">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a target="_blank" rel="noopener" href="https://aliridesu.github.io/hexoTest/8/" class="post-title-link" itemprop="url">08-CSS列表布局</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-07-15 09:43:22 / 修改时间：10:26:44" itemprop="dateCreated datePublished" datetime="2021-07-15T09:43:22+08:00">2021-07-15</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="css列表布局"><a href="#css列表布局" class="headerlink" title="css列表布局"></a>css列表布局</h2><pre><code>1.等间距列表布局
-    在外容器添加margin
-2.贴边布局
-</code></pre>
-<h2 id="多级导航布局"><a href="#多级导航布局" class="headerlink" title="多级导航布局"></a>多级导航布局</h2><pre><code>1.父子级关系
-</code></pre>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1227,7 +1272,7 @@ e）space-around：在容器中平均分布，两端有空隙
       <div class="site-state-item site-state-posts">
           <a target="_blank" rel="noopener" href="https://aliridesu.github.io/hexoTest/archives/">
         
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
