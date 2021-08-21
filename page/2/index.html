@@ -147,6 +147,228 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/10/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://aliridesu.github.io/hexoTest/images/avatar.gif">
+      <meta itemprop="name" content="Aliri">
+      <meta itemprop="description" content="this is just a test">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aliri学习笔记">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a target="_blank" rel="noopener" href="https://aliridesu.github.io/hexoTest/10/" class="post-title-link" itemprop="url">10-CSS媒体查询</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-07-26 09:28:17 / 修改时间：11:35:20" itemprop="dateCreated datePublished" datetime="2021-07-26T09:28:17+08:00">2021-07-26</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="媒体查询"><a href="#媒体查询" class="headerlink" title="媒体查询"></a>媒体查询</h3><pre><code>描述：查询媒体设备，并使得页面能够根据不同的媒体设备，加载为不同样式
+语法：
+    @media 生效没提设备 生效条件 （生效条件范围）&#123;
+        ...
+    &#125;
+注意：
+1. 要根据生效田间范围，来决定媒体查询定义的顺序
+2. 语法中合理的使用空格，不能省略
+特点：
+优势：似的页面结构能够根据不同设备动态显示样式
+劣势：一个页面中会姬成多个页面的样式代码，工作量成倍增加
+</code></pre>
+<h3 id="flex"><a href="#flex" class="headerlink" title="flex"></a>flex</h3><pre><code>1.    flex
+用于：flex子项
+子属性：flex-grow, flex-shrink, flex-basis
+取值：a) 1 → 1 1 0%
+            b) auto → 1 1 auto
+            c) none → 0 0 auto
+            d) 0 auto → 0 1 auto 初始值
+2.    flex-grow
+    用于：flex子项
+    取值：number， 默认为0， 不分配剩余空间
+作用：用数值定义子项的扩展比率，扩展多少取决于剩余空间。
+3.    flex-shrink
+用于：flex子项
+取值：number， 默认为1。
+作用：用数值定义元素收缩比率。计算所有盒子相加比率进行收缩。
+4.    flex-basis
+用于：flex子项
+取值：length：用长度定义宽度。Percentage：用百分比定义宽度。auto：无特定宽度，取    决于其他属性值。content：基于内容自动计算宽度。
+作用：用数值定义子项的扩展比率，扩展多少取决于剩余空间
+5.    flex-grow
+用于：flex容器
+子属性：flex-direction, flex-wrap
+6.    flex-direction
+用于：flex容器
+取值：row,row-reverse,column,column-reverse
+作用：定义主轴方向
+7.    flex-wrap
+用于：flex容器
+取值：nowrap,wrap,wrap-reverse
+作用：设置容器内不是否换行
+8.    align-content
+用于：多行弹性盒模型容器
+取值：    a）flex-start：从起始位置随侧轴堆叠
+b）flex-end：在容器结束为止随侧轴堆叠
+c）center：随侧轴中间堆叠
+d）space-between：在容器中平均分布，两端没有空隙
+e）space-around：在容器中平均分布，两端有空隙
+f）stretch：各部分伸展占用剩余空间，剩余空间为负数则等同于flex-start
+作用：设置多行模型内部盒子侧轴堆叠方式
+9.    align-items
+用于：弹性盒模型容器
+取值：    a）flex-start：从起始位置随侧轴堆叠
+b）flex-end：在容器结束为止随侧轴堆叠
+c）center：随侧轴中间堆叠
+d）stretch：各部分伸展占用剩余空间，剩余空间为负数则等同于flex-start
+e）baseline：元素盒与基线对齐，弱行内轴与侧轴为同一条，则等同于flex-start
+作用：设置单行模型内部盒子侧轴堆叠方式
+10.    align-self
+用于：flex子项
+取值：    a）flex-start：从起始位置随侧轴堆叠
+b）flex-end：在容器结束为止随侧轴堆叠
+c）center：随侧轴中间堆叠
+d）stretch：各部分伸展占用剩余空间，剩余空间为负数则等同于flex-start
+e） baseline：元素盒与基线对齐，弱行内轴与侧轴为同一条，则等同于flex-start
+f） auto：计算父元素的align-items值，否则为stretch
+作用：设置盒子堆叠方式
+11.    justify-content
+用于：flex容器
+取值：    a）flex-start：从起始位置随侧轴堆叠
+b）flex-end：在容器结束为止随侧轴堆叠
+c）center：随侧轴中间堆叠
+d）space-between：在容器中平均分布，两端没有空隙
+e）space-around：在容器中平均分布，两端有空隙
+作用：设置盒子元素在主轴上的对齐方式
+12.    flex-grow
+    用于：flex子项和flex容器中的绝对定位子元素
+    取值：integer
+    作用：用整数来定义排列顺序，数值小的会被盖住，可以为负值
+</code></pre>
+<h3 id="rem布局"><a href="#rem布局" class="headerlink" title="rem布局"></a>rem布局</h3><pre><code>公式：（ 尺寸 / 750 ）* 100
+</code></pre>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://aliridesu.github.io/hexoTest/images/avatar.gif">
+      <meta itemprop="name" content="Aliri">
+      <meta itemprop="description" content="this is just a test">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aliri学习笔记">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a target="_blank" rel="noopener" href="https://aliridesu.github.io/hexoTest/9/" class="post-title-link" itemprop="url">09-CSS过渡，动画</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-07-16 09:43:27" itemprop="dateCreated datePublished" datetime="2021-07-16T09:43:27+08:00">2021-07-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-07-26 09:28:28" itemprop="dateModified" datetime="2021-07-26T09:28:28+08:00">2021-07-26</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="transform"><a href="#transform" class="headerlink" title="transform"></a>transform</h2><p>元素变换位置尽可能微小，<br>变换元素样式是基于用户视觉的，文档流中元素位置不会发生变化<br>    1. translate(x,y,z) 元素位移样式<br>    2. rotate(deg)      元素旋转样式<br>    3. scale(x,y,z)     元素缩放样式<br>    4. *skrew(xdeg,ydeg)元素拉伸样式</p>
+<h2 id="transition"><a href="#transition" class="headerlink" title="transition"></a>transition</h2><pre><code>语法：transition:过渡样式，名称，？过渡变化速率函数，？延迟时间
+描述：把瞬时的变化改为需要消耗一段时间来变化
+注意：
+    1. transition的添加位置不同，也会带来不同的效果
+    2. 只有具备变化过程的样式，才能使用过渡属性
+</code></pre>
+<h2 id="animation"><a href="#animation" class="headerlink" title="animation"></a>animation</h2><pre><code>定义：@keyframes&#123;
+    0%&#123;
+
+    &#125;
+    100%&#123;
+
+    &#125;
+&#125;
+使用：animation: 名称 时长
+</code></pre>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -839,7 +1061,7 @@ b.允许css文件和html文件分离开，使团队开发成为可能
       <div class="site-state-item site-state-posts">
           <a target="_blank" rel="noopener" href="https://aliridesu.github.io/hexoTest/archives/">
         
-          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-count">20</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

@@ -147,6 +147,182 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/20/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://aliridesu.github.io/hexoTest/images/avatar.gif">
+      <meta itemprop="name" content="Aliri">
+      <meta itemprop="description" content="this is just a test">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aliri学习笔记">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a target="_blank" rel="noopener" href="https://aliridesu.github.io/hexoTest/20/" class="post-title-link" itemprop="url">20-JS-导航列表</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-08-18 13:28:47 / 修改时间：13:56:45" itemprop="dateCreated datePublished" datetime="2021-08-18T13:28:47+08:00">2021-08-18</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol>
+<li>分析页面结构</li>
+<li>寻找功能入口</li>
+<li>注意初始化页面</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/19/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://aliridesu.github.io/hexoTest/images/avatar.gif">
+      <meta itemprop="name" content="Aliri">
+      <meta itemprop="description" content="this is just a test">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aliri学习笔记">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a target="_blank" rel="noopener" href="https://aliridesu.github.io/hexoTest/19/" class="post-title-link" itemprop="url">19-JS-BOM,DOM对象</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-08-16 09:30:25 / 修改时间：16:44:13" itemprop="dateCreated datePublished" datetime="2021-08-16T09:30:25+08:00">2021-08-16</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1><h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><pre><code>提供了一套用来管理控制，操作html页面的规则
+是将页面中的原色，文本等都看做是节点，并由节点构成树状结构（DOM Tree）
+通过管理DOM Tree来间接达到操作管理页面的目的。
+</code></pre>
+<h1 id="DOM-API"><a href="#DOM-API" class="headerlink" title="DOM API"></a>DOM API</h1><pre><code>1. node.nodeName    节点名称
+2. node.nodeType    节点类型
+</code></pre>
+<h1 id="DOM-Node-API"><a href="#DOM-Node-API" class="headerlink" title="DOM Node API"></a>DOM Node API</h1><h3 id="规定"><a href="#规定" class="headerlink" title="规定"></a>规定</h3><pre><code>DOM中为了提高性能，规定如果可以获取到DOM Tree中的某一个节点，那么就可以通过这个节点直接或简介的访问到DOM Tree中的任何一个节点，可以有效的提高浏览器性能
+</code></pre>
+<h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><pre><code>HTML页面加载的过程中存在两个严重问题，【回流reflow】和【重绘repaint】
+</code></pre>
+<h3 id="回流-reflow"><a href="#回流-reflow" class="headerlink" title="回流    reflow"></a>回流    reflow</h3><pre><code>页面中元素的布局、尺寸等样式发生变化导致的页面重新加载
+</code></pre>
+<h3 id="重绘-repaint"><a href="#重绘-repaint" class="headerlink" title="重绘    repaint"></a>重绘    repaint</h3><pre><code>页面中元素的颜色或者文字颜色等样式发生变化导致的页面重新渲染。
+</code></pre>
+<ol>
+<li>返回当前节点的父节点         node.parentNode</li>
+<li>返回当前节点的子节点         node.childNodes</li>
+<li>返回当前节点的前一个兄弟节点 node.previousSibling</li>
+<li>返回当前节点的后一个兄弟节点 node.nextSibling<h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><ol>
+<li> 尽可能将选中操作或添加操作写在一起</li>
+<li>合理使用文档碎片节点  documentFragment<h2 id="querySelect与getElement区别"><a href="#querySelect与getElement区别" class="headerlink" title="querySelect与getElement区别"></a>querySelect与getElement区别</h2><h2 id="描述-1"><a href="#描述-1" class="headerlink" title="描述"></a>描述</h2>前者返回的结果叫：静态节点列表<br>后者返回的结果叫：动态节点集合<h2 id="classList"><a href="#classList" class="headerlink" title="classList"></a>classList</h2><h3 id="描述-2"><a href="#描述-2" class="headerlink" title="描述"></a>描述</h3>add和remove都不会对原有的class造成影响<h3 id="原则"><a href="#原则" class="headerlink" title="原则"></a>原则</h3>尽可能不要使用js直接修改样式，通过修改class的方式来修改样式<h3 id="扩展-1"><a href="#扩展-1" class="headerlink" title="扩展"></a>扩展</h3>client</li>
+</ol>
+</li>
+</ol>
+<h1 id="BOM-浏览器对象模型"><a href="#BOM-浏览器对象模型" class="headerlink" title="BOM   浏览器对象模型"></a>BOM   浏览器对象模型</h1><h2 id="描述-3"><a href="#描述-3" class="headerlink" title="描述"></a>描述</h2><pre><code>BOM就是一套帮助js管理操作浏览器的规则，其中BOM将浏览器本身看做是一个对象，而浏览器中的某些功能模块当做是对象的属性来看待。
+其中window对象为BOM规则中的顶级对象。
+</code></pre>
+<h2 id="说明-1"><a href="#说明-1" class="headerlink" title="说明"></a>说明</h2><pre><code>js中所有无人认领的变量和函数都会自动成为window的属性和方法，所有window对象上的属性和方法在使用的时候，均可以省略window不写。
+</code></pre>
+<h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><pre><code>window.screen 获取浏览器加载时所在的【屏幕】的信息
+window.location 获取url地址信息，其中href属性用于页面跳转
+window.navigator 获取应用信息   userAgent 浏览器加载时，设备内核信息
+window.history  访问过的页面的缓存
+</code></pre>
+<h1 id="计时器"><a href="#计时器" class="headerlink" title="计时器"></a>计时器</h1><h2 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h2><h3 id="描述-4"><a href="#描述-4" class="headerlink" title="描述"></a>描述</h3><pre><code>每间隔一定时间，执行某段代码
+</code></pre>
+<h3 id="扩展-2"><a href="#扩展-2" class="headerlink" title="扩展"></a>扩展</h3><pre><code>定时器返回的结果数据类型是数字（第几个定时器），只是为了清除
+</code></pre>
+<h2 id="延迟器"><a href="#延迟器" class="headerlink" title="延迟器"></a>延迟器</h2><pre><code>等待某短时间，执行某段代码
+</code></pre>
+<h2 id="数据本地化策略（缓存）"><a href="#数据本地化策略（缓存）" class="headerlink" title="数据本地化策略（缓存）"></a>数据本地化策略（缓存）</h2><h2 id="描述-5"><a href="#描述-5" class="headerlink" title="描述"></a>描述</h2><pre><code>浏览器存放数据的地方，和页面之间保持互相锁定
+</code></pre>
+<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><pre><code>使得浏览器中页面之间的值传递成为了可能
+</code></pre>
+<h2 id="cookie-小数据文档"><a href="#cookie-小数据文档" class="headerlink" title="cookie 小数据文档"></a>cookie 小数据文档</h2><pre><code>h5之前
+</code></pre>
+<h2 id="storage"><a href="#storage" class="headerlink" title="storage"></a>storage</h2><pre><code>h5新增
+</code></pre>
+<h3 id="localStorage-本地存储仓库"><a href="#localStorage-本地存储仓库" class="headerlink" title="localStorage 本地存储仓库"></a>localStorage 本地存储仓库</h3><h4 id="描述-6"><a href="#描述-6" class="headerlink" title="描述"></a>描述</h4><pre><code>结构简单，只有key和value，只要不删除，就永远存在
+</code></pre>
+<h3 id="sessionStorage-安全存储仓库"><a href="#sessionStorage-安全存储仓库" class="headerlink" title="sessionStorage 安全存储仓库"></a>sessionStorage 安全存储仓库</h3><h4 id="描述-7"><a href="#描述-7" class="headerlink" title="描述"></a>描述</h4><pre><code>结构简单与localStorage各方面都完全一致，但关闭页面数据就自动删除
+</code></pre>
+<h3 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h3><pre><code>storage存储类型只能是字符串，如果想要想缓存中存入非基本数据类型，需要JSON转码与解析
+</code></pre>
+<h2 id="offset家族属性"><a href="#offset家族属性" class="headerlink" title="offset家族属性"></a>offset家族属性</h2>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/18/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -981,228 +1157,6 @@ ES6
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/10/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://aliridesu.github.io/hexoTest/images/avatar.gif">
-      <meta itemprop="name" content="Aliri">
-      <meta itemprop="description" content="this is just a test">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Aliri学习笔记">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a target="_blank" rel="noopener" href="https://aliridesu.github.io/hexoTest/10/" class="post-title-link" itemprop="url">10-CSS媒体查询</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-07-26 09:28:17 / 修改时间：11:35:20" itemprop="dateCreated datePublished" datetime="2021-07-26T09:28:17+08:00">2021-07-26</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="媒体查询"><a href="#媒体查询" class="headerlink" title="媒体查询"></a>媒体查询</h3><pre><code>描述：查询媒体设备，并使得页面能够根据不同的媒体设备，加载为不同样式
-语法：
-    @media 生效没提设备 生效条件 （生效条件范围）&#123;
-        ...
-    &#125;
-注意：
-1. 要根据生效田间范围，来决定媒体查询定义的顺序
-2. 语法中合理的使用空格，不能省略
-特点：
-优势：似的页面结构能够根据不同设备动态显示样式
-劣势：一个页面中会姬成多个页面的样式代码，工作量成倍增加
-</code></pre>
-<h3 id="flex"><a href="#flex" class="headerlink" title="flex"></a>flex</h3><pre><code>1.    flex
-用于：flex子项
-子属性：flex-grow, flex-shrink, flex-basis
-取值：a) 1 → 1 1 0%
-            b) auto → 1 1 auto
-            c) none → 0 0 auto
-            d) 0 auto → 0 1 auto 初始值
-2.    flex-grow
-    用于：flex子项
-    取值：number， 默认为0， 不分配剩余空间
-作用：用数值定义子项的扩展比率，扩展多少取决于剩余空间。
-3.    flex-shrink
-用于：flex子项
-取值：number， 默认为1。
-作用：用数值定义元素收缩比率。计算所有盒子相加比率进行收缩。
-4.    flex-basis
-用于：flex子项
-取值：length：用长度定义宽度。Percentage：用百分比定义宽度。auto：无特定宽度，取    决于其他属性值。content：基于内容自动计算宽度。
-作用：用数值定义子项的扩展比率，扩展多少取决于剩余空间
-5.    flex-grow
-用于：flex容器
-子属性：flex-direction, flex-wrap
-6.    flex-direction
-用于：flex容器
-取值：row,row-reverse,column,column-reverse
-作用：定义主轴方向
-7.    flex-wrap
-用于：flex容器
-取值：nowrap,wrap,wrap-reverse
-作用：设置容器内不是否换行
-8.    align-content
-用于：多行弹性盒模型容器
-取值：    a）flex-start：从起始位置随侧轴堆叠
-b）flex-end：在容器结束为止随侧轴堆叠
-c）center：随侧轴中间堆叠
-d）space-between：在容器中平均分布，两端没有空隙
-e）space-around：在容器中平均分布，两端有空隙
-f）stretch：各部分伸展占用剩余空间，剩余空间为负数则等同于flex-start
-作用：设置多行模型内部盒子侧轴堆叠方式
-9.    align-items
-用于：弹性盒模型容器
-取值：    a）flex-start：从起始位置随侧轴堆叠
-b）flex-end：在容器结束为止随侧轴堆叠
-c）center：随侧轴中间堆叠
-d）stretch：各部分伸展占用剩余空间，剩余空间为负数则等同于flex-start
-e）baseline：元素盒与基线对齐，弱行内轴与侧轴为同一条，则等同于flex-start
-作用：设置单行模型内部盒子侧轴堆叠方式
-10.    align-self
-用于：flex子项
-取值：    a）flex-start：从起始位置随侧轴堆叠
-b）flex-end：在容器结束为止随侧轴堆叠
-c）center：随侧轴中间堆叠
-d）stretch：各部分伸展占用剩余空间，剩余空间为负数则等同于flex-start
-e） baseline：元素盒与基线对齐，弱行内轴与侧轴为同一条，则等同于flex-start
-f） auto：计算父元素的align-items值，否则为stretch
-作用：设置盒子堆叠方式
-11.    justify-content
-用于：flex容器
-取值：    a）flex-start：从起始位置随侧轴堆叠
-b）flex-end：在容器结束为止随侧轴堆叠
-c）center：随侧轴中间堆叠
-d）space-between：在容器中平均分布，两端没有空隙
-e）space-around：在容器中平均分布，两端有空隙
-作用：设置盒子元素在主轴上的对齐方式
-12.    flex-grow
-    用于：flex子项和flex容器中的绝对定位子元素
-    取值：integer
-    作用：用整数来定义排列顺序，数值小的会被盖住，可以为负值
-</code></pre>
-<h3 id="rem布局"><a href="#rem布局" class="headerlink" title="rem布局"></a>rem布局</h3><pre><code>公式：（ 尺寸 / 750 ）* 100
-</code></pre>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/9/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://aliridesu.github.io/hexoTest/images/avatar.gif">
-      <meta itemprop="name" content="Aliri">
-      <meta itemprop="description" content="this is just a test">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Aliri学习笔记">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a target="_blank" rel="noopener" href="https://aliridesu.github.io/hexoTest/9/" class="post-title-link" itemprop="url">09-CSS过渡，动画</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-07-16 09:43:27" itemprop="dateCreated datePublished" datetime="2021-07-16T09:43:27+08:00">2021-07-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-07-26 09:28:28" itemprop="dateModified" datetime="2021-07-26T09:28:28+08:00">2021-07-26</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="transform"><a href="#transform" class="headerlink" title="transform"></a>transform</h2><p>元素变换位置尽可能微小，<br>变换元素样式是基于用户视觉的，文档流中元素位置不会发生变化<br>    1. translate(x,y,z) 元素位移样式<br>    2. rotate(deg)      元素旋转样式<br>    3. scale(x,y,z)     元素缩放样式<br>    4. *skrew(xdeg,ydeg)元素拉伸样式</p>
-<h2 id="transition"><a href="#transition" class="headerlink" title="transition"></a>transition</h2><pre><code>语法：transition:过渡样式，名称，？过渡变化速率函数，？延迟时间
-描述：把瞬时的变化改为需要消耗一段时间来变化
-注意：
-    1. transition的添加位置不同，也会带来不同的效果
-    2. 只有具备变化过程的样式，才能使用过渡属性
-</code></pre>
-<h2 id="animation"><a href="#animation" class="headerlink" title="animation"></a>animation</h2><pre><code>定义：@keyframes&#123;
-    0%&#123;
-
-    &#125;
-    100%&#123;
-
-    &#125;
-&#125;
-使用：animation: 名称 时长
-</code></pre>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1272,7 +1226,7 @@ e）space-around：在容器中平均分布，两端有空隙
       <div class="site-state-item site-state-posts">
           <a target="_blank" rel="noopener" href="https://aliridesu.github.io/hexoTest/archives/">
         
-          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-count">20</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
