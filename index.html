@@ -147,6 +147,110 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/21/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://aliridesu.github.io/hexoTest/images/avatar.gif">
+      <meta itemprop="name" content="Aliri">
+      <meta itemprop="description" content="this is just a test">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aliri学习笔记">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a target="_blank" rel="noopener" href="https://aliridesu.github.io/hexoTest/21/" class="post-title-link" itemprop="url">21-JS-element form</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-08-31 18:16:06" itemprop="dateCreated datePublished" datetime="2021-08-31T18:16:06+08:00">2021-08-31</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-09-01 08:56:17" itemprop="dateModified" datetime="2021-09-01T08:56:17+08:00">2021-09-01</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>[toc]</p>
+<h1 id="表格格式"><a href="#表格格式" class="headerlink" title="表格格式"></a>表格格式</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-table</span> <span class="attr">:data</span>=<span class="string">&quot;tableData&quot;</span> <span class="attr">style</span>=<span class="string">&quot;width: 100%&quot;</span> <span class="attr">stripe</span> &gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">&quot;date&quot;</span> <span class="attr">label</span>=<span class="string">&quot;日0期&quot;</span> <span class="attr">width</span>=<span class="string">&quot;180&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">&quot;name&quot;</span> <span class="attr">label</span>=<span class="string">&quot;姓名&quot;</span> <span class="attr">width</span>=<span class="string">&quot;180&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">&quot;address&quot;</span> <span class="attr">label</span>=<span class="string">&quot;地址&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">el-table</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="data"><a href="#data" class="headerlink" title="data"></a>data</h2><p>绑定数据</p>
+<h2 id="prop"><a href="#prop" class="headerlink" title="prop"></a>prop</h2><p>子标签绑定父标签的属性</p>
+<h2 id="stripe"><a href="#stripe" class="headerlink" title="stripe"></a>stripe</h2><p>作用在父标签，生成斑马纹表格,从第二个数据开始变色</p>
+<h2 id="row-class-name"><a href="#row-class-name" class="headerlink" title="row-class-name"></a>row-class-name</h2><p>为Table中某一行添加class</p>
+<h2 id="height-固定表头"><a href="#height-固定表头" class="headerlink" title="height 固定表头"></a>height 固定表头</h2><p>设置表格整体高度<br>max-height 流体高度</p>
+<h2 id="内部使用函数"><a href="#内部使用函数" class="headerlink" title="内部使用函数"></a>内部使用函数</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">slot-scope</span>=<span class="string">&quot;scope&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-button</span> @<span class="attr">click</span>=<span class="string">&quot;handleClick(scope.row)&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">size</span>=<span class="string">&quot;small&quot;</span>&gt;</span>查看<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">size</span>=<span class="string">&quot;small&quot;</span>&gt;</span>编辑<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="fixed-固定列"><a href="#fixed-固定列" class="headerlink" title="fixed 固定列"></a>fixed 固定列</h2><p>子元素使用，列表横向内容多时固定列<br>可传参数：boolean,left,right</p>
+<h2 id="多层嵌套"><a href="#多层嵌套" class="headerlink" title="多层嵌套"></a>多层嵌套</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-table</span> <span class="attr">:data</span>=<span class="string">&quot;tableData&quot;</span> <span class="attr">style</span>=<span class="string">&quot;width: 100%&quot;</span> <span class="attr">stripe</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">&quot;date&quot;</span> <span class="attr">label</span>=<span class="string">&quot;日期&quot;</span> <span class="attr">width</span>=<span class="string">&quot;150&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 一级标题 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">label</span>=<span class="string">&quot;配送信息&quot;</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- 二级标题 --&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">&quot;name&quot;</span> <span class="attr">label</span>=<span class="string">&quot;姓名&quot;</span> <span class="attr">width</span>=<span class="string">&quot;120&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- 二级标题 --&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">label</span>=<span class="string">&quot;地址&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 三级标题 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">&quot;province&quot;</span> <span class="attr">label</span>=<span class="string">&quot;省份&quot;</span> <span class="attr">width</span>=<span class="string">&quot;120&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">&quot;city&quot;</span> <span class="attr">label</span>=<span class="string">&quot;市区&quot;</span> <span class="attr">width</span>=<span class="string">&quot;120&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">&quot;address&quot;</span> <span class="attr">label</span>=<span class="string">&quot;地址&quot;</span> <span class="attr">width</span>=<span class="string">&quot;300&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">&quot;zip&quot;</span> <span class="attr">label</span>=<span class="string">&quot;邮编&quot;</span> <span class="attr">width</span>=<span class="string">&quot;120&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="选中-highlight-current-row"><a href="#选中-highlight-current-row" class="headerlink" title="选中 highlight-current-row"></a>选中 highlight-current-row</h2><p>@current-change=’方法’ 方法默认传入(currentRow,oldCurrentRow)</p>
+<h2 id="子标签type"><a href="#子标签type" class="headerlink" title="子标签type"></a>子标签type</h2><h3 id="index"><a href="#index" class="headerlink" title="index"></a>index</h3><p>显示序号</p>
+<h3 id="selection"><a href="#selection" class="headerlink" title="selection"></a>selection</h3><p>显示多选</p>
+<h3 id="index-1"><a href="#index-1" class="headerlink" title="index"></a>index</h3><p>可以在此标签继续绑定index为一个函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">:index=<span class="string">&quot;fn&quot;</span><span class="comment">//标签属性</span></span><br><span class="line"><span class="function"><span class="title">fn</span>(<span class="params">index</span>)</span>&#123;  <span class="comment">//函数</span></span><br><span class="line">    <span class="keyword">return</span> index*<span class="number">2</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="expand"><a href="#expand" class="headerlink" title="expand"></a>expand</h3><p>可展开,内容需要与scoped slot联合使用</p>
+<h2 id="setCurrentRow-设置当前选中行"><a href="#setCurrentRow-设置当前选中行" class="headerlink" title="setCurrentRow 设置当前选中行"></a>setCurrentRow 设置当前选中行</h2><p>setCurrentRow(row);row为第几行，为空则取消选中状态</p>
+<h3 id="show-overflow-tooltip"><a href="#show-overflow-tooltip" class="headerlink" title="show-overflow-tooltip"></a>show-overflow-tooltip</h3><p>内容过长隐藏 值为boolean true为隐藏 hover时显示 需要设置宽度</p>
+<h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><h3 id="sotrable"><a href="#sotrable" class="headerlink" title="sotrable"></a>sotrable</h3><p>子元素设置  值为boolean 默认false 设置是否排序</p>
+<h3 id="default-sort"><a href="#default-sort" class="headerlink" title="default-sort"></a>default-sort</h3><p>设置排序列和排序顺序</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:default-sort = &quot;&#123;prop: &#x27;date&#x27;, order: &#x27;descending&#x27;&#125;&quot;</span><br></pre></td></tr></table></figure>
+<p>其中descending为降序排列,ascending为升序</p>
+<h2 id="筛选"><a href="#筛选" class="headerlink" title="筛选"></a>筛选</h2><p>子标签中设置</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">filters=<span class="string">&quot;[</span></span><br><span class="line"><span class="string">          &#123; text: &#x27;家&#x27;, value: &#x27;家&#x27; &#125;,//text：显示选择的标签，value:标签的值</span></span><br><span class="line"><span class="string">          &#123; text: &#x27;公司&#x27;, value: &#x27;公司&#x27; &#125;,</span></span><br><span class="line"><span class="string">        ]&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">clearFilter(<span class="string">&#x27;date&#x27;</span>) <span class="comment">//清除某列筛选 不传参表示清除所有筛选</span></span><br><span class="line">:filter-method=<span class="string">&quot;fn&quot;</span> <span class="comment">//绑定筛选函数 默认传入value，row，column</span></span><br></pre></td></tr></table></figure>
+<h2 id="scoped-slot"><a href="#scoped-slot" class="headerlink" title="scoped slot"></a>scoped slot</h2><p>获取row,column,$index,store(内部管理数据),表现为在子标签内容</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">label</span>=<span class="string">&quot;操作&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">template</span> <span class="attr">slot-scope</span>=<span class="string">&quot;scope&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">size</span>=<span class="string">&quot;mini&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;handleEdit(scope.$index, scope.row)&quot;</span></span></span><br><span class="line"><span class="tag">      &gt;</span>编辑&lt;/el-button</span><br><span class="line">    &gt;</span><br><span class="line">    <span class="tag">&lt;<span class="name">el-button</span></span></span><br><span class="line"><span class="tag">      <span class="attr">size</span>=<span class="string">&quot;mini&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">type</span>=<span class="string">&quot;danger&quot;</span></span></span><br><span class="line"><span class="tag">      @<span class="attr">click</span>=<span class="string">&quot;handleDelete(scope.$index, scope.row)&quot;</span></span></span><br><span class="line"><span class="tag">      &gt;</span>删除&lt;/el-button</span><br><span class="line">    &gt;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="树形数据"><a href="#树形数据" class="headerlink" title="树形数据"></a>树形数据</h2><p>row中包含children字段时，被视为属性数据，此时必须要指定row-key(写在父标签上)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">row-key=<span class="string">&quot;id&quot;</span></span><br></pre></td></tr></table></figure>
+<h3 id="default-expand-all"><a href="#default-expand-all" class="headerlink" title="default-expand-all"></a>default-expand-all</h3><p>父标签使用，展开所有树</p>
+<p>使用 tree-props 配置哪些行有子节点<br>children属性为子节点数据<br>hasChildren为是否有子节点，懒加载使用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:tree-props=<span class="string">&quot;&#123; children: &#x27;children&#x27;, hasChildren: &#x27;hasChildren&#x27; &#125;&quot;</span></span><br></pre></td></tr></table></figure>
+<h3 id="lazy-懒加载"><a href="#lazy-懒加载" class="headerlink" title="lazy 懒加载"></a>lazy 懒加载</h3><p>父标签使用 lazy 懒加载 需要绑定load为一个函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">load(tree, treeNode, resolve)<span class="comment">//resolve为回调函数,参数应为一个数组，并返回这个参数</span></span><br><span class="line"></span><br><span class="line">resolve([</span><br><span class="line">          &#123;</span><br><span class="line">            <span class="attr">id</span>: <span class="number">31</span>,</span><br><span class="line">            <span class="attr">date</span>: <span class="string">&quot;2016-05-01&quot;</span>,</span><br><span class="line">            <span class="attr">name</span>: <span class="string">&quot;王小虎&quot;</span>,</span><br><span class="line">            <span class="attr">address</span>: <span class="string">&quot;上海市普陀区金沙江路 1519 弄&quot;</span>,</span><br><span class="line">          &#125;,</span><br><span class="line">          &#123;</span><br><span class="line">            <span class="attr">id</span>: <span class="number">32</span>,</span><br><span class="line">            <span class="attr">date</span>: <span class="string">&quot;2016-05-01&quot;</span>,</span><br><span class="line">            <span class="attr">name</span>: <span class="string">&quot;王小虎&quot;</span>,</span><br><span class="line">            <span class="attr">address</span>: <span class="string">&quot;上海市普陀区金沙江路 1519 弄&quot;</span>,</span><br><span class="line">          &#125;,</span><br><span class="line">        ])</span><br></pre></td></tr></table></figure>
+<h2 id="自定义表头"><a href="#自定义表头" class="headerlink" title="自定义表头"></a>自定义表头</h2><p>在el-table-column中使用slot-scope 其中表头的templa要设置slot=’header’</p>
+<h2 id="表尾合计"><a href="#表尾合计" class="headerlink" title="表尾合计"></a>表尾合计</h2><p>父标签设置show-summary属性<br>默认第一列不进行数据求和操作，显示’合计’两个字，可通过sum-text修改</p>
+<h3 id="summary-method"><a href="#summary-method" class="headerlink" title="summary-method"></a>summary-method</h3><p>自定义函数</p>
+<h2 id="合并"><a href="#合并" class="headerlink" title="合并"></a>合并</h2><p>父标签传入 span-method 方法 参数是一个对象 返回值为数组或对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">:span-method=<span class="string">&quot;arraySpanMethod&quot;</span> <span class="comment">//table标签属性</span></span><br><span class="line"><span class="function"><span class="title">arraySpanMethod</span>(<span class="params">&#123; row, column, rowIndex, columnIndex &#125;</span>)</span> &#123;<span class="comment">//方法</span></span><br><span class="line">        <span class="keyword">if</span> (rowIndex % <span class="number">2</span> === <span class="number">0</span>) &#123;</span><br><span class="line">          <span class="keyword">if</span> (columnIndex === <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> [<span class="number">1</span>, <span class="number">2</span>];</span><br><span class="line">          &#125; <span class="keyword">else</span> <span class="keyword">if</span> (columnIndex === <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> [<span class="number">0</span>, <span class="number">0</span>];</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">objectSpanMethod</span>(<span class="params">&#123; row, column, rowIndex, columnIndex &#125;</span>)</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (columnIndex === <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (rowIndex % <span class="number">2</span> === <span class="number">0</span>) &#123;</span><br><span class="line">          <span class="keyword">return</span> &#123;</span><br><span class="line">            <span class="attr">rowspan</span>: <span class="number">2</span>,</span><br><span class="line">            <span class="attr">colspan</span>: <span class="number">1</span>,</span><br><span class="line">          &#125;;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="keyword">return</span> &#123;</span><br><span class="line">            <span class="attr">rowspan</span>: <span class="number">0</span>,</span><br><span class="line">            <span class="attr">colspan</span>: <span class="number">0</span>,</span><br><span class="line">          &#125;;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/20/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1059,108 +1163,10 @@ ES6
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/11/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://aliridesu.github.io/hexoTest/images/avatar.gif">
-      <meta itemprop="name" content="Aliri">
-      <meta itemprop="description" content="this is just a test">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Aliri学习笔记">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a target="_blank" rel="noopener" href="https://aliridesu.github.io/hexoTest/11/" class="post-title-link" itemprop="url">11-JS-1</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-08-03 09:16:57" itemprop="dateCreated datePublished" datetime="2021-08-03T09:16:57+08:00">2021-08-03</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-08-04 09:26:12" itemprop="dateModified" datetime="2021-08-04T09:26:12+08:00">2021-08-04</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>单行注释   </span><br><span class="line">    描述：一般用于注释单行内容</span><br><span class="line">    语法：<span class="comment">//....</span></span><br><span class="line">    例子：</span><br><span class="line">        <span class="keyword">var</span> a = <span class="number">10</span>; <span class="comment">//这是一段js代码</span></span><br><span class="line"><span class="number">2.</span>多行注释</span><br><span class="line">    描述：用于注释多行内容</span><br><span class="line">    语法<span class="comment">/*....*/</span></span><br><span class="line">    例子：<span class="comment">/* 下面的代码表示xxx */</span></span><br><span class="line"><span class="number">3.</span>文档注释</span><br><span class="line">    描述：用于在应用打包的时候生成文档从而不占用应用内存的注释方式</span><br><span class="line">    语法：<span class="comment">/** ... */</span></span><br></pre></td></tr></table></figure>
-<h3 id="名词概述"><a href="#名词概述" class="headerlink" title="名词概述"></a>名词概述</h3><pre><code>说明：JavaScript 本名 LiveScript
-标准：ES5 ES6 
-    js无法直接操作html页面，因为js操作的是内存，如果想要操作页面，则必须借助于某种手段来间接操作页面。这个手段就是dom。
-名词：
-    DOM：文档对象模型。一套用于帮助js管理操作html页面的规则。
-        dom中提供了非常多的api，通过api可以打到操作页面的目的。
-    API:应用程序接口。提供了一些固定的途径。通过这些途径可以完成对封闭
-        系统内部的某些功能，却不需要了解内部是如何实现的。
-    节点：dom规则中认为，页面的元素就是节点，文本也是节点（node）。
-    节点树：dom tree，由节点构成的树状结构。
-    根节点：document节点。是整个节点树的根节点。表示整个页面本身。
-</code></pre>
-<h3 id="dom规则"><a href="#dom规则" class="headerlink" title="dom规则"></a>dom规则</h3><h4 id="api："><a href="#api：" class="headerlink" title="api："></a>api：</h4><pre><code>1. 选中页面元素
-    语法：
-         document.querySelector(&#39;将要选中的页面元素的选择器名称&#39;);
-2. 给选中的元素添加点击事件
-    语法：
-        内存名称.onclick = function () &#123;
-            ...
-        &#125;
-3. 给选中的元素修改内容
-    语法：node.innerHTML （不可编辑标签）| node.value = xxx （可编辑标签）;
-4. 给选中的元素修改样式
-    语法：node.style.xxx = css样式值 | node.style.cssText = css代码
-    如果出现中划线，将中划线删除，将后续的首字母大写。
-5. 在内存中创建新的元素，并添加至页面中
-    语法：document.createElement(&#39;创建的元素名称&#39;);
-    node.appendChild(元素); 
-</code></pre>
-<h3 id="js"><a href="#js" class="headerlink" title="js"></a>js</h3><h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><pre><code>描述：其表示的内容可以发生改变的量，就是变量。
-语法：var 变量名;
-说明：在js中，创建变量的过程实际上就是向系统申请内存的过程。
-</code></pre>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" target="_blank" rel="noopener" href="https://aliridesu.github.io/hexoTest/page/2/">2</a><a class="extend next" rel="next noopener" target="_blank" href="https://aliridesu.github.io/hexoTest/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" target="_blank" rel="noopener" href="https://aliridesu.github.io/hexoTest/page/2/">2</a><a class="page-number" target="_blank" rel="noopener" href="https://aliridesu.github.io/hexoTest/page/3/">3</a><a class="extend next" rel="next noopener" target="_blank" href="https://aliridesu.github.io/hexoTest/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1226,7 +1232,7 @@ ES6
       <div class="site-state-item site-state-posts">
           <a target="_blank" rel="noopener" href="https://aliridesu.github.io/hexoTest/archives/">
         
-          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-count">21</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
